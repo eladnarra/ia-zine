@@ -1,0 +1,24 @@
+[
+    {
+        "topic": "Do It Yourself",
+        "name": "Art + DIY Electronics",
+        "img": "/img/img1.png",
+        "alt": "",
+        "author": "Garnet Hertz",
+        "collection": "MIT Press: Open Access Materials",
+        "link": "https://archive.org/details/mit_press_book_9780262361576",
+        "type": "book",
+        "description": "A systematic theory of DIY electronic culture, drawn from a century of artists who have independently built creative technologies."
+    },
+    {
+        "topic": "Board games",
+        "name": "Playing Oppression: The Legacy of Conquest and Empire in Colonialist Board Games ",
+        "img": "/img/img2.png",
+        "alt": "",
+        "author": "Mary Flanagan and Mikael Jakobsson",
+        "collection": "MIT Press: Open Access Materials",
+        "link": "https://archive.org/details/mit_press_book_9780262373715",
+        "type": "book",
+        "description": "A striking analysis of popular board games' roots in imperialist reasoning — and why the future of play depends on reckoning with it."
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "eladnarra",
+        "pronouns": "she/her",
+        "link": "https://links.eladnarra.com"
+    },
+    {
+        "name": "test",
+        "pronouns": "she/they",
+        "link": "https://example.com"
+    },
+    {
+        "name": "test2",
+        "pronouns": "he/him",
+        "link": "https://example.com"
+    }
+]

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The (Unofficial) Internet Archive Fundraising Zine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>The (Unofficial) Internet Archive Fundraising Zine!</h1>
+    </header>
+    <main>
+        <h2>Intro</h2>
+        <p>The <a href="https://archive.org">Internet Archive</a> is an amazing repository of old websites, books, zines, music, games, and more, available to the public for free! In these times their work to preserve our culture and history is more important than ever, and they need our support.</p>
+        <p>In honor of <a href="https://www.ica.org/international-archives-week/iaw2025/">International Archives Week 2025</a>, a group of zinesters, webweavers, and archive fans got together to run a fundraiser for the Internet Archive. For every donation of $5 or more, we found a cool thing that lives in the Internet Archive, with the option for donors to request a topic. And then we collected them into this zine!</p>
+        <p>If you donated to our fundraiser, thank you so much! And if you'd like to donate to them directly, you can do so at <a href="https://archive.org/donate/">archive.org/donate.</a></p>
+        <nav>
+            <h2>Contents</h2>
+            <ol>
+                {%- for item in researchItems -%}
+                <li><a href="#{{loop.index}}">{{item.topic}}</a></li>
+                {%- endfor -%}
+            </ol>
+        </nav>
+        {%- for item in researchItems -%}
+        <article class="item">
+            <h2 id="{{loop.index}}">{{loop.index}}. "{{item.topic}}"</h2>
+            <img src="{{item.img}}" alt="{{img.alt}}" width="500" height="400"/>
+            <div class="info">
+                <p><cite><a href="{{item.link}}">{{item.name}}</a></cite></p>
+            <dl>
+                <!-- <div>
+                    <dt>Title</dt>
+                    <dd><a href="{{item.link}}">{{item.name}}</a></dd>
+                </div> -->
+                <div>
+                    <dt>Author{%- if "and" in item.author-%}s{%- endif -%}</dt>
+                    <dd>{{item.author}}</dd>
+                </div>
+                <div>
+                    <dt>Type</dt>
+                    <dd>{{item.type}}</dd>
+                </div>
+                {%- if item.collection -%}
+                <div>
+                    <dt>Collection</dt>
+                    <dd>{{item.collection}}</dd>
+                </div>
+                {%- endif -%}
+            </dl>
+            </div>
+            <div class="description">
+                <p>{{item.description}}</p>
+            </div>
+            
+        </article>
+        {%- endfor -%}
+        <h2>Credits</h2>
+        <p>This zine wouldn't have been possible without these amazing researchers, coders, and artists!</p>
+        <ul class="volunteers">
+            {%- for volunteer in volunteers -%}
+            <li><a href="{{volunteer.link}}">{{volunteer.name}} ({{volunteer.pronouns}})</a></li>
+            {%- endfor -%}
+        </ul>
+    </main>
+    <footer>
+        <p>You can download a printable copy of this zine at [itch link] or [IA link]!</p>
+    </footer>
+</body>
+</html>
