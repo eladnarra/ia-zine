@@ -56,14 +56,14 @@ nav ol, ul.volunteers, article {
         gap: 10px; 
     }
 
-    main article:nth-child(even) {
+    main article:nth-child(odd) {
         grid-template-areas: 
         "picture heading"
         "picture info"
         "description description";
     }
     
-    main article:nth-child(odd) {
+    main article:nth-child(even) {
         grid-template-areas: 
         "heading picture"
         "info picture"
