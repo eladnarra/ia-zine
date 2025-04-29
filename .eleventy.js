@@ -26,7 +26,7 @@ export default async function(eleventyConfig) {
 			imgAttributes: {
 				loading: "lazy",
 				decoding: "async",
-                sizes: "100vw"
+                sizes: "(min-width: 600px) 280px, 100vw"
 			},
 			pictureAttributes: {}
 		},
