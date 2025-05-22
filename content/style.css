@@ -19,7 +19,7 @@
 body {
     max-width: 70ch;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 15px;
 }
 
 h1, footer {
@@ -38,11 +38,23 @@ h1+*, h2+*, h3+*, h4+*, h5+*, h6+*,
     margin-block-start: 0;
 }
 
-.cover {
-    max-block-size: 90vh;
+.cover, .art {
+    block-size: 90vh;
     inline-size: auto;
     border: 2px solid currentColor;
     margin-inline: auto;
+}
+
+aside figure {
+    inline-size: 100%;
+    margin: 0;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.85rem;
 }
 
 nav ol, ul.volunteers {
@@ -52,7 +64,7 @@ nav ol, ul.volunteers {
 }
 
 nav ol, ul.volunteers, article {
-    margin-block-end: 3rem;
+    margin-block-end: 2.5rem;
 }
 
 @media only screen and (min-width: 600px) {
