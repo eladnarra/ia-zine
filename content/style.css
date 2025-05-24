@@ -1,61 +1,134 @@
 /* Root Styles          ---------------------- */
 
-:root {
-    --sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, arial, helvetica, sans-serif;
-    --serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    /* very basic light/dark theme, with default browser colors */
-    color-scheme: dark light;
-    /*stop layout shift when switching between pages with and without scrollbars */
-    scrollbar-gutter: stable both-edges;
-    font-family: var(--sans-serif);
-    font-size: 1.15rem;
-    line-height: 1.5;
-}
+    @font-face {
+        font-family: 'Typewriter 215FP Web';
+        src: url('/typewriter215fp-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+    :root {
+        --sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, arial, helvetica, sans-serif;
+        --serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+        --typewriter: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+        /* very basic light/dark theme, with default browser colors */
+        color-scheme: dark light;
+        /*stop layout shift when switching between pages with and without scrollbars */
+        scrollbar-gutter: stable both-edges;
+        font-family: var(--sans-serif);
+        font-size: 1.15rem;
+        line-height: 1.5;
+    }
 
-body {
-    max-width: 70ch;
-    margin: 0 auto;
-    padding: 15px;
-}
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
 
-h1, footer {
-    text-align: center;
-}
+    /* use paper textures for background: https://www.transparenttextures.com/ - on entire page, or just the body?*/
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--serif);
-    margin-block-start: 1.1em;
-    margin-block-end: 0.2em;
-    line-height: 1.2;
-}
+/* Basic Styles          ---------------------- */
 
-h1+*, h2+*, h3+*, h4+*, h5+*, h6+*,
-.info p {
-    margin-block-start: 0;
-}
+    body {
+        max-inline-size: 70ch;
+        margin: 0 auto;
+        padding: 15px;
+    }
 
-.cover, .art {
-    block-size: 90vh;
-    inline-size: auto;
-    border: 2px solid currentColor;
-    margin-inline: auto;
-}
+    h1, footer {
+        text-align: center;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+    }
 
-aside figure {
-    inline-size: 100%;
-    margin: 0;
-    margin-block-start: 2rem;
-    margin-block-end: 2rem;
-}
+    h1 {
+        rotate: -0.5deg;
+    }
 
-figcaption {
-    text-align: center;
-    font-size: 0.85rem;
-}
+    h1, h2, h3, h4, h5, h6 {
+        margin-block-start: 1.1em;
+        margin-block-end: 0.2em;
+        line-height: 1.2;
+        font-family: var(--typewriter);
+        text-wrap: balance;
+    }
+
+    h1+*, h2+*, h3+*, h4+*, h5+*, h6+*,
+    .info p {
+        margin-block-start: 0;
+    }
+
+    .paper-strip {
+        background-color: lightblue;
+        filter: drop-shadow(1px 1px 1px black);
+        color: #1C1B22;
+        padding: 5px;
+        line-height: 1.6;
+    }
+    
+    article:nth-of-type(even) h2, h2:nth-of-type(odd) {
+        rotate: -1deg;
+    }
+    article:nth-of-type(odd) h2, h2:nth-of-type(even) {
+        rotate: 1deg;
+    }
+
+    header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav li {
+        font-family: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+        font-size: 1.2rem;
+        display: inline-block;
+        margin: 5px;
+        background-color: lightblue; /*this color is just for testing; need to create dark and light color themes*/
+        color: #1C1B22;
+        filter: drop-shadow(1px 1px 1px black);
+    }
+
+    header nav li a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: #1C1B22;
+    }
+
+    header nav li:hover, nav li:focus-within {
+        position: relative;
+        top: 2px;
+        filter: none;
+    }
+
+    header nav li:nth-of-type(even) {
+        rotate: -1.5deg;
+    }
+    header nav li:nth-of-type(odd) {
+        rotate: 0.75deg;
+    }
+
+/* Zine Styles          ----------------------  */
+
+    .cover, .art {
+        /* so the idea is that the image is never taller than the screen... but with smaller widths it overflows. hm. how did i manage this on other zines? */
+        block-size: 90vh;
+        inline-size: auto;
+        border: 2px solid currentColor;
+        margin-inline: auto;
+    }
+
+    aside figure {
+        inline-size: 100%;
+        margin: 0;
+        margin-block-start: 2rem;
+        margin-block-end: 2rem;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 0.85rem;
+    }
 
 nav ol, ul.volunteers {
     column-count: auto;
@@ -64,7 +137,7 @@ nav ol, ul.volunteers {
 }
 
 nav ol, ul.volunteers, article {
-    margin-block-end: 2.5rem;
+    margin-block-end: 2rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -139,5 +212,29 @@ dd {
 }
 
 footer {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+}
+
+a:focus {
+    text-decoration: none;
+    outline-offset: 2px;
+    outline: lightblue 2px solid; /* need to change this color to work for light/dark */
+}
+
+.video-embed {
+  position: relative;
+  overflow: hidden;
+  inline-size: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  margin-block: 1rem;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  inline-size: 100%;
+  height: 100%;
 }

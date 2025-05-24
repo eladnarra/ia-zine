@@ -4,15 +4,15 @@ layout: base_layout
 title: The (Unofficial) Internet Archive Fundraising Zine!
 footer: "You can download a printable PDF of this zine at [itch link] or [IA link]! And you can find of these cool pieces of media in this [Internet Archive list]."
 ---
-<img src="" alt="front cover placeholder" eleventy:optional="placeholder" width="500" height="800" class="cover">
+<!-- <img src="" alt="front cover placeholder" eleventy:optional="placeholder" width="500" height="800" class="cover"> -->
 <!-- <h2>About</h2>
 <p>This zine was created during a fundraiser for the <a href="https://archive.org">Internet Archive</a>. It showcases a tiny fraction of the amazing old websites, books, zines, music, games, and more that are available on the archive (for free!). </p>
 
 <hr> -->
-<h2>What's This Zine?</h2>
+<h2><span class="paper-strip">What's This Zine?</span></h2>
 <p>The <a href="https://archive.org">Internet Archive</a> houses an amazing collection of websites, books, zines, music, games, and more, available to the public for free. They catalog changes to websites new and old through their Wayback Machine, and they share media that isn't available elsewhere, like historical 78rpm records.</p>
 <p>But the Internet Archive's mission is under threat from record label lawsuits and cyber attacks. As governments take down webpages to erase history and media companies restrict access to our collective culture, their work is more important than ever — and they need our support!</p>
-<p>In honor of <a href="https://www.ica.org/international-archives-week/iaw2025/">International Archives Week 2025</a>, a group of zinesters, archive fans, and webweavers ran a fundraiser for the Internet Archive. For every donation of $5 or more we found a cool thing in the archive, with donors able to request a topic. And at the end we collected all of them into this free zine!</p>
+<p>In honor of <a href="https://www.ica.org/international-archives-week/iaw2025/">International Archives Week 2025</a>, a group of zinesters, archive fans, and webweavers ran a fundraiser for the Internet Archive. For every donation of $5 or more we found a cool thing in the archive, and at the end we collected all of them into this free zine!</p>
 <p>Over the course of the week we raised <strong>${{total}}</strong> from <strong>{{researchItems.length}}</strong> people! Thank you so very much to everyone who donated. And if you missed your chance, you can still <a href="https://archive.org/donate/">donate here</a>.</p>
 <p>Let's help keep the Internet Archive alive!</p>
 
@@ -21,9 +21,9 @@ footer: "You can download a printable PDF of this zine at [itch link] or [IA lin
 <p>In honor of <a href="https://www.ica.org/international-archives-week/iaw2025/">International Archives Week 2025</a>, a group of zinesters, webweavers, and archive fans got together to run a fundraiser for the Internet Archive. For every donation of $5 or more we found a cool thing in the Internet Archive, with donors able to request a topic. And at the end we collected all of them into this free zine!</p>
 <p>Over the course of the week we received a total of <strong>${{total}}</strong> from <strong>{{researchItems.length}}</strong> people! Thank you so so much to everyone who donated. If you missed your chance and want to donate, you can do so directly at <a href="https://archive.org/donate/">archive.org/donate.</a> </p>
 <p>Let's help keep the Internet Archive alive!</p> -->
-<nav>
-    <h2>Contents</h2>
-    <p>Donors could suggest a topic; if they didn't, researchers got to use a "wildcard" and pick something they like!</p>
+<nav aria-labelledby="contents">
+    <h2 id="contents"><span class="paper-strip">Contents</span></h2>
+    <p>Donors could suggest a topic; if they didn't, researchers got a "wildcard" and picked something they like!</p>
     <ol>
         {%- for item in researchItems -%}
         <li><a href="#{{loop.index}}-{{item.topic | slugify}}">{{item.topic}}</a></li>
@@ -38,7 +38,7 @@ footer: "You can download a printable PDF of this zine at [itch link] or [IA lin
 </aside>
 {%- for item in researchItems -%}
 <article class="item">
-    <h2 id="{{loop.index}}-{{item.topic | slugify}}">{{loop.index}}. {{item.topic}}</h2>
+    <h2 id="{{loop.index}}-{{item.topic | slugify}}"><span class="paper-strip">{{loop.index}}. {{item.topic}}</span></h2>
     <img src="{{item.img}}" alt="{{img.alt}}">
     <div class="info">
         <p><cite><a href="{{item.link}}">{{item.name}}</a></cite></p>
@@ -105,11 +105,11 @@ footer: "You can download a printable PDF of this zine at [itch link] or [IA lin
     </div>
 </article>
 {%- endfor -%}#}
-<h2>Credits</h2>
+<h2><span class="paper-strip">Credits</span></h2>
 <p>This zine wouldn't have been possible without these amazing researchers, coders, and artists!</p>
 <ul class="volunteers">
     {%- for volunteer in volunteers -%}
     <li><a href="{{volunteer.link}}">{{volunteer.name}} ({{volunteer.pronouns}})</a></li>
     {%- endfor -%}
 </ul>
-<img src="" alt="back cover placeholder" eleventy:optional="placeholder" width="500" height="800" class="cover">
+<!-- <img src="" alt="back cover placeholder" eleventy:optional="placeholder" width="500" height="800" class="cover"> -->

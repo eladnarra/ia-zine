@@ -10,6 +10,7 @@ export default async function(eleventyConfig) {
 
     // Copy `css/` to `_site/`
 	eleventyConfig.addPassthroughCopy("content/style.css");
+	eleventyConfig.addPassthroughCopy("content/typewriter215fp-webfont.woff");
 
     // Passthrough during --serve
     eleventyConfig.setServerPassthroughCopyBehavior("passthrough");

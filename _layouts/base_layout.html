@@ -10,25 +10,26 @@
     <header>
         some sort of image for the header?
         <p><a href="/">The (Unofficial) Internet Archive Fundraising Zine</a></p>
-        <nav>
-            <!-- Note: add programmatic aria-page="current" -->
-            <ul>
+        <nav aria-label="main"> <!-- give it a label/name because there are 2 navs on zine page -->
+            <ul role="list">
                 <li><a href="/#donate">Donate</a></li> <!-- change this to Internet Archive donate page when thing is over -->
-                <li><a href="/about/">About</a></li>
-                <li><a href="/media/">Media</a> - maybe?</li>
-                <li><a href="/links/">Links</a> - maybe?</li>
+                <li><a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
+                <!-- <li><a href="/media/"{% if page.url == "/media/" %} aria-current="page"{% endif %}>Media</a> - maybe?</li> -->
+                <li><a href="/links/"{% if page.url == "/links/" %} aria-current="page"{% endif %}>Links</a></li>
                 <li>Zine - Coming Soon!</li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>{{ title }}</h1>
+        <h1><span class="paper-strip">{{ title }}</span></h1>
         {{ content | safe}}
     </main>
-    {% if footer -%}
     <footer>
+        {% if footer -%}
         <p>{{ footer | safe }}</p>
+        {%- endif %}
+        <p><a href="/accessibility/">Accessibility</a></p>
     </footer>
-    {%- endif %}
+    
 </body>
 </html>
