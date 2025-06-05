@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | The (Unofficial) Internet Archive Fundraising Zine</title>
+    <title>{{ title }} | TheInternet Archive Fundraiser Zine</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
-        some sort of image for the header?
-        <p><a href="/">The (Unofficial) Internet Archive Fundraising Zine</a></p>
+        <!-- TODO: Replace link below with image link for Home page? -->
+        <p><a href="/">The Internet Archive Fundraiser Zine</a></p>
         <nav aria-label="main"> <!-- give it a label/name because there are 2 navs on zine page -->
             <ul role="list">
                 <li><a href="/#donate">Donate</a></li> <!-- change this to Internet Archive donate page when thing is over -->
-                <li><a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a></li>
-                <!-- <li><a href="/media/"{% if page.url == "/media/" %} aria-current="page"{% endif %}>Media</a> - maybe?</li> -->
+                <li><a href="/faq/"{% if page.url == "/faq/" %} aria-current="page"{% endif %}>FAQ</a></li>
                 <li><a href="/links/"{% if page.url == "/links/" %} aria-current="page"{% endif %}>Links</a></li>
-                <li>Zine - Coming Soon!</li>
+                <li><span>Zine - Coming Soon!</span></li>
             </ul>
         </nav>
     </header>

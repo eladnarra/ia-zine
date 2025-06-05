@@ -1,3 +1,8 @@
+/* 
+    TODO: 
+        * Reenable dark scheme using media query and variables 
+            * Keep headings and menu colors the same for both dark and light schemes
+*/
 /* Root Styles          ---------------------- */
 
     @font-face {
@@ -12,17 +17,26 @@
         --serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
         --typewriter: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
         /* very basic light/dark theme, with default browser colors */
-        color-scheme: dark light;
+         color-scheme: light /*dark*/; 
         /*stop layout shift when switching between pages with and without scrollbars */
-        scrollbar-gutter: stable both-edges;
+        scrollbar-gutter: stable;
         font-family: var(--sans-serif);
         font-size: 1.15rem;
         line-height: 1.5;
+        background-color: antiquewhite;
     }
 
     *, *::before, *::after {
         box-sizing: border-box;
     }
+
+    html {
+        /* background-image:
+        linear-gradient(antiquewhite, antiquewhite),
+        url(/img/paper-background.jpg);
+        background-size: repeat;
+        background-blend-mode: multiply; */
+    }  
 
     /* use paper textures for background: https://www.transparenttextures.com/ - on entire page, or just the body?*/
 
@@ -46,7 +60,7 @@
 
     h1, h2, h3, h4, h5, h6 {
         margin-block-start: 1.1em;
-        margin-block-end: 0.2em;
+        margin-block-end: 0.4em;
         line-height: 1.2;
         font-family: var(--typewriter);
         text-wrap: balance;
@@ -58,11 +72,16 @@
     }
 
     .paper-strip {
-        background-color: lightblue;
+        /* background-color: lightblue; */
         filter: drop-shadow(1px 1px 1px black);
         color: #1C1B22;
         padding: 5px;
         line-height: 1.6;
+        background-image:
+        linear-gradient(#ddf3fa, #ddf3fa),
+        url(/img/paper-background.jpg);
+        background-repeat:repeat;
+        background-blend-mode: multiply;
     }
     
     article:nth-of-type(even) h2, h2:nth-of-type(odd) {
@@ -83,21 +102,29 @@
         font-size: 1.2rem;
         display: inline-block;
         margin: 5px;
-        background-color: lightblue; /*this color is just for testing; need to create dark and light color themes*/
+        background-image:
+            linear-gradient(lavender, lavender),
+            url(/img/paper-background.jpg);
+        background-repeat:repeat;
+        background-blend-mode: multiply;
         color: #1C1B22;
         filter: drop-shadow(1px 1px 1px black);
     }
 
-    header nav li a {
+    header nav li a, header nav li span {
         display: block;
         padding: 5px;
         text-decoration: none;
         color: #1C1B22;
     }
 
-    header nav li:hover, nav li:focus-within {
+    header nav li:active:has(a) {
         position: relative;
         top: 2px;
+        filter: none;
+    }
+
+    header nav li:focus-within {   
         filter: none;
     }
 
@@ -112,8 +139,8 @@
 
     .cover, .art {
         /* so the idea is that the image is never taller than the screen... but with smaller widths it overflows. hm. how did i manage this on other zines? */
-        block-size: 90vh;
-        inline-size: auto;
+        max-inline-size: 45ch;
+        block-size: auto;
         border: 2px solid currentColor;
         margin-inline: auto;
     }
@@ -215,10 +242,20 @@ footer {
     font-size: 0.9rem;
 }
 
-a:focus {
+*:focus { /* for browsers that don't support :focus-visible */
     text-decoration: none;
     outline-offset: 2px;
-    outline: lightblue 2px solid; /* need to change this color to work for light/dark */
+    outline: #1C1B22 2px solid;
+}
+
+*:focus:not(:focus-visible) { /* disable :focus when :focus-visible is supported */
+    outline: none;
+}
+
+*:focus-visible {
+    text-decoration: none;
+    outline-offset: 2px;
+    outline: #1C1B22 2px solid;    
 }
 
 .video-embed {

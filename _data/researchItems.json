@@ -2,7 +2,7 @@
     {
         "topic": "Do It Yourself",
         "name": "Art + DIY Electronics",
-        "img": "/img/img1.png",
+        "img": "img1.png",
         "alt": "",
         "author": "Garnet Hertz",
         "collection": "MIT Press: Open Access Materials",
@@ -13,7 +13,7 @@
     {
         "topic": "Board games",
         "name": "Playing Oppression: The Legacy of Conquest and Empire in Colonialist Board Games ",
-        "img": "/img/img2.png",
+        "img": "img2.png",
         "alt": "",
         "author": "Mary Flanagan and Mikael Jakobsson",
         "collection": "MIT Press: Open Access Materials",
@@ -24,7 +24,7 @@
     {
         "topic": "Wildcard",
         "name": "Playing Oppression: The Legacy of Conquest and Empire in Colonialist Board Games ",
-        "img": "",
+        "img": "img2.png",
         "alt": "",
         "author": "Mary Flanagan and Mikael Jakobsson",
         "collection": "MIT Press: Open Access Materials",
