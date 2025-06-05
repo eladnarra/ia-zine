@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <a class="skip-link paper-strip" href='#main'>Skip to content</a>
     <header>
         <!-- TODO: Replace link below with image link for Home page? -->
         <p><a href="/">The Internet Archive Fundraiser Zine</a></p>
@@ -19,7 +20,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <h1><span class="paper-strip">{{ title }}</span></h1>
         {{ content | safe}}
     </main>
