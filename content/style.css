@@ -40,12 +40,36 @@
 
     /* use paper textures for background: https://www.transparenttextures.com/ - on entire page, or just the body?*/
 
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
 /* Basic Styles          ---------------------- */
 
     body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-wrapper {
         max-inline-size: 70ch;
+        margin-inline: auto;
         margin: 0 auto;
         padding: 15px;
+    }
+
+    @media (min-width: 768px) {
+        .content-wrapper {
+            min-inline-size: 70ch;
+        }
     }
 
     h1, footer {
@@ -154,6 +178,21 @@
     header nav li:nth-of-type(odd) {
         rotate: 0.75deg;
     }
+
+/* Zoho Form Styles     ----------------------  */
+
+.zoho-form {
+  width: 100%;
+  min-height: 885px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 600px) {
+    .zoho-form {
+        min-height: 970px;
+    }
+}
 
 /* Zine Styles          ----------------------  */
 
