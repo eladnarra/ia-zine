@@ -50,13 +50,13 @@
     box-sizing: border-box;
 }
 
-html {
-    /* background-image:
+/*html {
+     background-image:
         linear-gradient(antiquewhite, antiquewhite),
         url(/img/paper-background.jpg);
         background-size: repeat;
-        background-blend-mode: multiply; */
-}
+        background-blend-mode: multiply; 
+}*/
 
 html,
 body {
@@ -237,14 +237,14 @@ header nav li:nth-of-type(odd) {
 
 .zoho-form {
     width: 100%;
-    min-height: 885px;
+    min-height: 1150px;
     border: none;
     display: block;
 }
 
 @media (max-width: 600px) {
     .zoho-form {
-        min-height: 970px;
+        min-height: 1250px;
     }
 }
 
