@@ -13,11 +13,11 @@
     },
     {
         "question" : "When does the fundraiser end?",
-        "answer" : "<p>June 15th, 11:59 PM EST.</p><p>You can <a href=\"https://www.timeanddate.com/worldclock/fixedtime.html?iso=20250615T2359&p1=179\" target=\"_blank\">view this time in your local timezone <span class=\"visually-hidden\">(opens in a new window)</span></a>.</p>"
+        "answer" : "<p>June 15th, 11:59 PM EST.</p><p>You can <a href=\"https://www.timeanddate.com/worldclock/fixedtime.html?iso=20250615T2359&p1=179\" target=\"_blank\">view this time in your local timezone<span class=\"visually-hidden\"> (opens in a new window)</span></a>.</p>"
     },
     {
         "question": "Where do the donations go?",
-        "answer": "<p>Directly to the Internet Archive. We never touch the money — we just ask that you donate via <a href=\"https://archive.org/donate\">https://archive.org/donate</a>, take a screenshot of your receipt, and share it through our form. No middlemen, no markup.</p>"
+        "answer": "<p>Directly to the Internet Archive. We never touch the money — we just ask that you donate via <a href=\"https://archive.org/donate\">https://archive.org/donate</a>, take a screenshot of your receipt, and share it through <a href=\"/#donate\">our form</a>. No middlemen, no markup.</p>"
     },
     {
         "question": "What will you include in the zine?",
