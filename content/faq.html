@@ -2,15 +2,13 @@
 title: "Frequently Asked Questions"
 layout: base_layout
 ---
-<!-- TODO: Turn into FAQ with suggested questions -->
-<h2><span class="paper-strip">Contributors</span></h2>
-<h2><span class="paper-strip">Credits</span></h2>
 <ul>
-    <li><a href="https://halftonehospital.gumroad.com/l/typewriter215FP">Typewriter 215FP Dialogue Font</a> by Halftone Hospital</li>
-    <li>
-        <!-- TODO: Figure out paper background we're using -->
-    </li>
-    <li></li>
-    <li></li>
-    <li></li>
+    {%- for faq in faq -%}
+        <li><a href="#{{faq.question | slugify}}">{{faq.question}}</a></li>
+    {%- endfor -%}
 </ul>
+
+{%- for faq in faq -%}
+    <h2 id="{{faq.question | slugify}}"><span class="paper-strip">{{ faq.question }}</span></h2>
+    {{ faq.answer | safe }}
+{%- endfor -%}
