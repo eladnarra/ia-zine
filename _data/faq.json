@@ -1,15 +1,15 @@
 [
     {
         "question" : "What's the Internet Archive?",
-        "answer" : "<p>The Internet Archive is a non-profit digital library that’s been archiving the internet since 1996. They preserve millions of websites, books, zines, music tracks, games, videos, and other media — all freely available to the public.</p><p>Ever used the <a href=\"https://web.archive.org/\">Wayback Machine</a>? That’s them. It’s like time travel for the web. They help researchers, students, journalists, and curious folks access content that might otherwise disappear forever.</p><p>In a world where knowledge is increasingly locked behind paywalls or deleted without warning, the Internet Archive is fighting to keep our digital history accessible — for everyone.</p>"
+        "answer" : "<p>The Internet Archive is a non-profit digital library that's been archiving the internet since 1996. They preserve millions of websites, books, zines, music tracks, games, videos, and other media — all freely available to the public.</p><p>Ever used the <a href=\"https://web.archive.org/\">Wayback Machine</a>? That's them. It's like time travel for the web. They help researchers, students, journalists, and curious folks access content that might otherwise disappear forever.</p><p>In a world where knowledge is increasingly locked behind paywalls or deleted without warning, the Internet Archive is fighting to keep our digital history accessible — for everyone.</p>"
     },
     {
         "question": "What's a 'zine'?",
-        "answer": "<p>Zines are self-published, DIY magazines full of passion, creativity, and personal perspective. They’ve been around for decades — covering everything from punk music to politics to fanfiction. Our zine is digital, but it carries the same handmade, community vibe.</p>"
+        "answer": "<p>Zines are self-published, DIY magazines full of passion, creativity, and personal perspective. They've been around for decades — covering everything from punk music to politics to fanfiction. Our zine is digital, but it carries the same handmade, community vibe.</p>"
     },
     {
         "question": "Why are you doing this?",
-        "answer": "<p>Because the Internet Archive matters. It preserves history, culture, and knowledge that might otherwise vanish — and it offers it freely to everyone. Right now, that mission is under threat, so we’re using what we know (research, design, community) to give back.</p>"
+        "answer": "<p>Because the Internet Archive matters. It preserves history, culture, and knowledge that might otherwise vanish — and it offers it freely to everyone. Right now, that mission is under threat, so we're using what we know (research, design, community) to give back.</p>"
     },
     {
         "question" : "When does the fundraiser end?",
@@ -25,7 +25,7 @@
     },
     {
         "question": "Can I suggest something specific?",
-        "answer": "<p>Yes! When you submit your receipt, you can include a topic you want us to explore. We’ll dig through the Archive and share our favorite finds in the zine.</p>"
+        "answer": "<p>Yes! When you submit your receipt, you can include a topic you want us to explore. We'll dig through the Archive and share our favorite finds in the zine.</p>"
     },
     {
         "question": "How many topics will be featured in the zine?",
@@ -33,19 +33,19 @@
     },
     {
         "question": "Do I have to donate to get the zine?",
-        "answer": "<p>Nope! The zine will be free and accessible to everyone. But we’d love it if you helped us support the Internet Archive — and donors will help shape the content of the zine and be listed (anonymously or with credit, your choice) as zine supporters.</p>"
+        "answer": "<p>Nope! The zine will be free and accessible to everyone. But we'd love it if you helped us support the Internet Archive — and donors will help shape the content of the zine and be listed (anonymously or with credit, your choice) as zine supporters.</p>"
     },
     {
         "question": "Will the zine be accessible?",
-        "answer": "<p>We’re designing it with accessibility in mind. The primary version will be an HTML zine, tested for common accessibility issues and designed to support screen reader and keyboard navigation. We’ll also offer a PDF version that uses tags and alt text appropriately, hosted on itch.io and the Internet Archive.</p>"
+        "answer": "<p>We're designing it with accessibility in mind. The primary version will be an HTML zine, tested for common accessibility issues and designed to support screen reader and keyboard navigation. We'll also offer a PDF version that uses tags and alt text appropriately, hosted on itch.io and the Internet Archive.</p>"
     },
     {
         "question": "When will the zine be published?",
-        "answer": "<p>Shortly after the fundraiser ends on June 15th. We’re aiming for [late June?] — but we’ll post updates here and on [social media? 32-bit cafe?]. Donors who leave an email will get a one-time notification when it goes live.</p>"
+        "answer": "<p>After the fundraiser ends on June 15th. We're aiming for late June or early July — but we'll post updates on this website, on <a href=\"https://archivezine.itch.io/\">our itch.io account</a>, and Mastodon/Bluesky with the hashtag #ArchiveZine2025. Donors who leave an email will get a one-time notification when it goes live.</p>"
     },
     {
         "question": "Will there be a print version?",
-        "answer": "<p>We're not planning a printed zine — but you’re welcome to print it yourself! The HTML version will be available online, and the downloadable PDF will be print-friendly. Our focus is supporting the Internet Archive so we'd like to encourage all monies go towards that, rather than print costs.</p>"
+        "answer": "<p>We're not planning a printed zine — but you're welcome to print it yourself! The HTML version will be available online, and there will be a print-friendly PDF. Our focus is supporting the Internet Archive so we'd like to encourage all monies go towards that, rather than print costs.</p>"
     },
     {
         "question": "Is there a minimum suggested donation?",
