@@ -1,191 +1,245 @@
 /* 
-    TODO: 
-        * Reenable dark scheme using media query and variables 
-            * Keep headings and menu colors the same for both dark and light schemes
+    TODO: Figure out vertical margins - flexbox seems to be making them stack rather than collapse?
 */
 /* Root Styles          ---------------------- */
 
-    @font-face {
-        font-family: 'Typewriter 215FP Web';
-        src: url('/typewriter215fp-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+    font-family: 'Typewriter 215FP Web';
+    src: url('/typewriter215fp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+:root {
+    --sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, arial, helvetica, sans-serif;
+    --serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --typewriter: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    color-scheme: light dark;
+    /* Light mode section */
+    --background-color: antiquewhite;
+    --text-color: #1C1B22;
+    --link-color: rgb(0, 0, 238);
+    --link-color-visited: #551A8B;
+    --link-color-active: rgb(238, 0, 0);
+    --nav-background: lavender;
+    --heading-background: #ddf3fa;
+    /*stop layout shift when switching between pages with and without scrollbars */
+    scrollbar-gutter: stable;
+    font-family: var(--sans-serif);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+@media only screen and (prefers-color-scheme:dark) {
     :root {
-        --sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, arial, helvetica, sans-serif;
-        --serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-        --typewriter: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-        /* very basic light/dark theme, with default browser colors */
-         color-scheme: light /*dark*/; 
-        /*stop layout shift when switching between pages with and without scrollbars */
-        scrollbar-gutter: stable;
-        font-family: var(--sans-serif);
-        font-size: 1.15rem;
-        line-height: 1.5;
-        background-color: antiquewhite;
+        --background-color: #1C1B22;
+        --text-color: rgb(251, 251, 254);
+        --link-color: #8C8CFF;
+        --link-color-visited: #FFADFF;
+        --link-color-active: rgb(255, 102, 102);
+        --nav-background: #f3fae6;
+        --heading-background: #fadddd;
     }
+}
 
-    *, *::before, *::after {
-        box-sizing: border-box;
-    }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-    html {
-        /* background-image:
+html {
+    /* background-image:
         linear-gradient(antiquewhite, antiquewhite),
         url(/img/paper-background.jpg);
         background-size: repeat;
         background-blend-mode: multiply; */
-    }  
+}
 
-    /* use paper textures for background: https://www.transparenttextures.com/ - on entire page, or just the body?*/
-
-    html, body {
-        height: 100%;
-        margin: 0;
-    }
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 
 /* Basic Styles          ---------------------- */
 
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
+a {
+    color: var(--link-color);
+}
 
-    main {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
+a:visited {
+    color: var(--link-color-visited);
+}
 
+a:active {
+    color: var(--link-color-visited);
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+} */
+
+.content-wrapper {
+    max-inline-size: 70ch;
+    margin-inline: auto;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
     .content-wrapper {
-        max-inline-size: 70ch;
-        margin-inline: auto;
-        margin: 0 auto;
-        padding: 15px;
+        min-inline-size: 70ch;
     }
+}
 
-    @media (min-width: 768px) {
-        .content-wrapper {
-            min-inline-size: 70ch;
-        }
-    }
+h1,
+footer {
+    text-align: center;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
 
-    h1, footer {
-        text-align: center;
-        margin-inline-start: auto;
-        margin-inline-end: auto;
-    }
+h1 {
+    rotate: -0.5deg;
+}
 
-    h1 {
-        rotate: -0.5deg;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-block-start: 1.1em;
+    margin-block-end: 0.4em;
+    line-height: 1.2;
+    font-family: var(--typewriter);
+    text-wrap: balance;
+}
 
-    h1, h2, h3, h4, h5, h6 {
-        margin-block-start: 1.1em;
-        margin-block-end: 0.4em;
-        line-height: 1.2;
-        font-family: var(--typewriter);
-        text-wrap: balance;
-    }
+h1+*,
+h2+*,
+h3+*,
+h4+*,
+h5+*,
+h6+*,
+.info p {
+    margin-block-start: 0;
+}
 
-    h1+*, h2+*, h3+*, h4+*, h5+*, h6+*,
-    .info p {
-        margin-block-start: 0;
-    }
-
-    .paper-strip {
-        /* background-color: lightblue; */
-        filter: drop-shadow(1px 1px 1px black);
-        color: #1C1B22;
-        padding: 5px;
-        line-height: 1.6;
-        background-image:
-        linear-gradient(#ddf3fa, #ddf3fa),
+.paper-strip {
+    filter: drop-shadow(1px 1px 1px black);
+    color: #1C1B22;
+    padding: 5px;
+    line-height: 1.6;
+    background-image:
+        linear-gradient(var(--heading-background), var(--heading-background)),
         url(/img/paper-background.jpg);
-        background-repeat:repeat;
-        background-blend-mode: multiply;
-    }
-    
-    .skip-link {
-        font-family: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-        left: 50%;
-        padding: 5px;
-        position: absolute;
-        transform: translateY(-200%);
-    }
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+}
 
-    .skip-link:focus {
-        transform: translateY(0%);
-    }
+.skip-link {
+    font-family: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    left: 50%;
+    padding: 5px;
+    position: absolute;
+    transform: translateY(-200%);
+    color:#1C1B22;
+    transition: transform 0.3s;
+}
 
-    .skip-link:focus-visible {
-        filter: none;
-    }
+.skip-link:visited {
+    color:#1C1B22;
+}
 
-    .skip-link {
-        transition: transform 0.3s;
-    }
+.skip-link:focus {
+    transform: translateY(0%);
+}
 
-    article:nth-of-type(even) h2, h2:nth-of-type(odd) {
-        rotate: -1deg;
-    }
-    article:nth-of-type(odd) h2, h2:nth-of-type(even) {
-        rotate: 1deg;
-    }
+.skip-link:focus-visible {
+    filter: none;
+}
 
-    header nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+.skip-link:active {
+    color:#1C1B22;
+}
 
-    header nav li {
-        font-family: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-        font-size: 1.2rem;
-        display: inline-block;
-        margin: 5px;
-        background-image:
-            linear-gradient(lavender, lavender),
-            url(/img/paper-background.jpg);
-        background-repeat:repeat;
-        background-blend-mode: multiply;
-        color: #1C1B22;
-        filter: drop-shadow(1px 1px 1px black);
-    }
+article:nth-of-type(even) h2,
+h2:nth-of-type(odd) {
+    rotate: -1deg;
+}
 
-    header nav li a, header nav li span {
-        display: block;
-        padding: 5px;
-        text-decoration: none;
-        color: #1C1B22;
-    }
+article:nth-of-type(odd) h2,
+h2:nth-of-type(even) {
+    rotate: 1deg;
+}
 
-    header nav li:active:has(a) {
-        position: relative;
-        top: 2px;
-        filter: none;
-    }
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    header nav li:focus-within {   
-        filter: none;
-    }
+header nav li {
+    font-family: "Typewriter 215FP Web", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 5px;
+    background-image:
+        linear-gradient(var(--nav-background), var(--nav-background)),
+        url(/img/paper-background.jpg);
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    color: #1C1B22;
+    filter: drop-shadow(1px 1px 1px black);
+}
 
-    header nav li:nth-of-type(even) {
-        rotate: -1.5deg;
-    }
-    header nav li:nth-of-type(odd) {
-        rotate: 0.75deg;
-    }
+header nav li a,
+header nav li a:visited,
+header nav li a:active,
+header nav li span {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #1C1B22;
+}
+
+header nav li:active:has(a) {
+    position: relative;
+    top: 2px;
+    filter: none;
+}
+
+header nav li:focus-within {
+    filter: none;
+}
+
+header nav li:nth-of-type(even) {
+    rotate: -1.5deg;
+}
+
+header nav li:nth-of-type(odd) {
+    rotate: 0.75deg;
+}
 
 /* Zoho Form Styles     ----------------------  */
 
 .zoho-form {
-  width: 100%;
-  min-height: 885px;
-  border: none;
-  display: block;
+    width: 100%;
+    min-height: 885px;
+    border: none;
+    display: block;
 }
 
 @media (max-width: 600px) {
@@ -196,33 +250,37 @@
 
 /* Zine Styles          ----------------------  */
 
-    .cover, .art {
-        /* so the idea is that the image is never taller than the screen... but with smaller widths it overflows. hm. how did i manage this on other zines? */
-        max-inline-size: 45ch;
-        block-size: auto;
-        border: 2px solid currentColor;
-        margin-inline: auto;
-    }
+.cover,
+.art {
+    /* so the idea is that the image is never taller than the screen... but with smaller widths it overflows. hm. how did i manage this on other zines? */
+    max-inline-size: 45ch;
+    block-size: auto;
+    border: 2px solid currentColor;
+    margin-inline: auto;
+}
 
-    aside figure {
-        inline-size: 100%;
-        margin: 0;
-        margin-block-start: 2rem;
-        margin-block-end: 2rem;
-    }
+aside figure {
+    inline-size: 100%;
+    margin: 0;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+}
 
-    figcaption {
-        text-align: center;
-        font-size: 0.85rem;
-    }
+figcaption {
+    text-align: center;
+    font-size: 0.85rem;
+}
 
-nav ol, ul.volunteers {
+nav ol,
+ul.volunteers {
     column-count: auto;
     column-gap: 0.5rem;
     column-width: 10rem;
 }
 
-nav ol, ul.volunteers, article {
+nav ol,
+ul.volunteers,
+article {
     margin-block-end: 2rem;
 }
 
@@ -230,26 +288,28 @@ nav ol, ul.volunteers, article {
     article {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr auto; 
-        gap: 10px; 
+        grid-template-rows: auto 1fr auto;
+        gap: 10px;
     }
 
     main article:nth-child(odd) {
-        grid-template-areas: 
-        "picture heading"
-        "picture info"
-        "description description";
+        grid-template-areas:
+            "picture heading"
+            "picture info"
+            "description description";
     }
-    
+
     main article:nth-child(even) {
-        grid-template-areas: 
-        "heading picture"
-        "info picture"
-        "description description";
+        grid-template-areas:
+            "heading picture"
+            "info picture"
+            "description description";
     }
+
     article h2 {
         grid-area: heading;
     }
+
     article picture {
         grid-area: picture;
     }
@@ -282,10 +342,11 @@ dl div {
     grid-auto-columns: 11ch 1fr;
 }
 
-dd, dt {
+dd,
+dt {
     display: inline;
     margin: 0;
-} 
+}
 
 dt {
     grid-column: 1 / 2;
@@ -301,36 +362,39 @@ footer {
     font-size: 0.9rem;
 }
 
-*:focus { /* for browsers that don't support :focus-visible */
+*:focus {
+    /* for browsers that don't support :focus-visible */
     text-decoration: none;
     outline-offset: 2px;
-    outline: #1C1B22 2px solid;
+    outline: var(--text-color) 2px solid;
 }
 
-*:focus:not(:focus-visible) { /* disable :focus when :focus-visible is supported */
+*:focus:not(:focus-visible) {
+    /* disable :focus when :focus-visible is supported */
     outline: none;
 }
 
 *:focus-visible {
     text-decoration: none;
     outline-offset: 2px;
-    outline: #1C1B22 2px solid;    
+    outline: var(--text-color) 2px solid;
 }
 
 .video-embed {
-  position: relative;
-  overflow: hidden;
-  inline-size: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  margin-block: 1rem;
+    position: relative;
+    overflow: hidden;
+    inline-size: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    margin-block: 1rem;
 }
 
 .video-embed iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  inline-size: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    inline-size: 100%;
+    height: 100%;
 }
