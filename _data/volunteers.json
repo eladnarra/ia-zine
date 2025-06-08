@@ -2,16 +2,13 @@
     {
         "name": "eladnarra",
         "pronouns": "she/her",
-        "link": "https://links.eladnarra.com"
+        "link": "https://links.eladnarra.com",
+        "supportSentence":"I love being able to find defunct websites about obscure topics like blackwork embroidery"
     },
     {
-        "name": "test",
-        "pronouns": "she/they",
-        "link": "https://example.com"
-    },
-    {
-        "name": "test2",
-        "pronouns": "he/him",
-        "link": "https://example.com"
+        "name": "silasoftrees",
+        "pronouns": "they/them",
+        "link": "https://silasoftrees.itch.io/",
+        "supportSentence":"I found the old campaign reports for the Record of Lodoss War original D&D campaign on there, and that's rad."
     }
 ]

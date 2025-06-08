@@ -137,6 +137,10 @@ h6+*,
     margin-block-start: 0;
 }
 
+li + li {
+    margin-block-start: .5rem;
+}
+
 .paper-strip {
     filter: drop-shadow(1px 1px 1px black);
     color: #1C1B22;
@@ -231,6 +235,10 @@ header nav li:nth-of-type(even) {
 
 header nav li:nth-of-type(odd) {
     rotate: 0.75deg;
+}
+
+.bold-text {
+    font-weight:600;
 }
 
 /* Zoho Form Styles     ----------------------  */

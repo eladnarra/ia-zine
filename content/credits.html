@@ -6,16 +6,13 @@ layout: base_layout
 <h2><span class="paper-strip">Volunteers</span></h2>
 <ul>
     {%- for volunteer in volunteers -%}
-    <li><a href="{{volunteer.link}}">{{volunteer.name}} ({{volunteer.pronouns}})</a></li>
+    <li><a href="{{volunteer.link}}">{{volunteer.name}}</a> ({{volunteer.pronouns}}) {%- if volunteer.supportSentence %}<br><span class="bold-text">I support the Internet Archive because:</span> {{volunteer.supportSentence}}{%- endif -%}</li>
     {%- endfor -%}
 </ul>
 <h2><span class="paper-strip">Credits</span></h2>
 <ul>
     <li><a href="https://halftonehospital.gumroad.com/l/typewriter215FP">Typewriter 215FP Dialogue Font</a> by Halftone Hospital</li>
     <li>
-        <!-- TODO: Figure out paper background we're using -->
+        <a href="https://medialoot.com/item/seamless-paper-texture-pack/">Smooth seamless paper texture</a> by MediaLoot
     </li>
-    <li></li>
-    <li></li>
-    <li></li>
 </ul>
