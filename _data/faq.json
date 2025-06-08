@@ -1,0 +1,59 @@
+[
+    {
+        "question" : "What's the Internet Archive?",
+        "answer" : "<p>The Internet Archive is a non-profit digital library that’s been archiving the internet since 1996. They preserve millions of websites, books, zines, music tracks, games, videos, and other media — all freely available to the public.</p><p>Ever used the <a href=\"https://web.archive.org/\">Wayback Machine</a>? That’s them. It’s like time travel for the web. They help researchers, students, journalists, and curious folks access content that might otherwise disappear forever.</p><p>In a world where knowledge is increasingly locked behind paywalls or deleted without warning, the Internet Archive is fighting to keep our digital history accessible — for everyone.</p>"
+    },
+    {
+        "question": "What's a 'zine'?",
+        "answer": "<p>Zines are self-published, DIY magazines full of passion, creativity, and personal perspective. They’ve been around for decades — covering everything from punk music to politics to fanfiction. Our zine is digital, but it carries the same handmade, community vibe.</p>"
+    },
+    {
+        "question": "Why are you doing this?",
+        "answer": "<p>Because the Internet Archive matters. It preserves history, culture, and knowledge that might otherwise vanish — and it offers it freely to everyone. Right now, that mission is under threat, so we’re using what we know (research, design, community) to give back.</p>"
+    },
+    {
+        "question" : "When does the fundraiser end?",
+        "answer" : "<p>June 15th, 11:59 PM EST.</p><p>You can <a href=\"https://www.timeanddate.com/worldclock/fixedtime.html?iso=20250615T2359&p1=179\" target=\"_blank\">view this time in your local timezone <span class=\"visually-hidden\">(opens in a new window)</span></a>.</p>"
+    },
+    {
+        "question": "Where do the donations go?",
+        "answer": "<p>Directly to the Internet Archive. We never touch the money — we just ask that you donate via <a href=\"https://archive.org/donate\">https://archive.org/donate</a>, take a screenshot of your receipt, and share it through our form. No middlemen, no markup.</p>"
+    },
+    {
+        "question": "What will you include in the zine?",
+        "answer": "<p>It could be anything we find while spelunking through the Archive — forgotten fan sites, vintage computing manuals, news reel clips, university lectures, old Flash games, early web art, or protest pamphlets. The more curious your topic, the better.</p>"
+    },
+    {
+        "question": "Can I suggest something specific?",
+        "answer": "<p>Yes! When you submit your receipt, you can include a topic you want us to explore. We’ll dig through the Archive and share our favorite finds in the zine.</p>"
+    },
+    {
+        "question": "How many topics will be featured in the zine?",
+        "answer": "<p>We are aiming for 56 as our max, given our capacity and the physical limitations of zines printed at home. Topic submissions received after that cutoff will be credited on the thank you page. We appreciate everyone who gives to the Internet Archive!</p>"
+    },
+    {
+        "question": "Do I have to donate to get the zine?",
+        "answer": "<p>Nope! The zine will be free and accessible to everyone. But we’d love it if you helped us support the Internet Archive — and donors will help shape the content of the zine and be listed (anonymously or with credit, your choice) as zine supporters.</p>"
+    },
+    {
+        "question": "Will the zine be accessible?",
+        "answer": "<p>We’re designing it with accessibility in mind. The primary version will be an HTML zine, tested for common accessibility issues and designed to support screen reader and keyboard navigation. We’ll also offer a PDF version that uses tags and alt text appropriately, hosted on itch.io and the Internet Archive.</p>"
+    },
+    {
+        "question": "When will the zine be published?",
+        "answer": "<p>Shortly after the fundraiser ends on June 15th. We’re aiming for [late June?] — but we’ll post updates here and on [social media? 32-bit cafe?]. Donors who leave an email will get a one-time notification when it goes live.</p>"
+    },
+    {
+        "question": "Will there be a print version?",
+        "answer": "<p>We're not planning a printed zine — but you’re welcome to print it yourself! The HTML version will be available online, and the downloadable PDF will be print-friendly. Our focus is supporting the Internet Archive so we'd like to encourage all monies go towards that, rather than print costs.</p>"
+    },
+    {
+        "question": "Is there a minimum suggested donation?",
+        "answer": "<p>The Internet Archive has no minimum donation amount, though they do require a $5.00 minimum for credit card donations. We suggest you only donate what you can afford. Those who can donate at least $5.00 will be able to suggest a topic for inclusion in our zine.</p>"
+    },
+    {
+        "question": "Can I support in other ways?",
+        "answer": "<p>Absolutely. Sharing the fundraiser, boosting our posts, and telling people why the Internet Archive matters to you are all incredibly helpful. This is also a collective project — we need researchers, artists, coders, and a hype squad, just as much as donors.</p>"
+    }
+]
+
