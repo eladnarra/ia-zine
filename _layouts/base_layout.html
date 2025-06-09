@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
     <title>{{ title }} | The Internet Archive Fundraiser Zine</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ajp8dwq.css">
     <link rel="stylesheet" href="/style.css">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://archivezine.org{{page.url}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }} | The Internet Archive Fundraiser Zine">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:image" content="https://archivezine.org/img/link-preview.jpg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="archivezine.org">
+<meta property="twitter:url" content="https://archivezine.org{{page.url}}">
+<meta name="twitter:title" content="{{ title }} | The Internet Archive Fundraiser Zine">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="https://archivezine.org/img/link-preview.jpg">
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
 </head>
 <body>
     <div class="content-wrapper">
-    <a class="skip-link paper-strip" href='#main'>Skip to content</a>
-    <header>
-        <!-- TODO: Replace link below with image link for Home page? -->
-        <p><a href="/">The Internet Archive Fundraiser Zine</a></p>
-        <nav aria-label="main"> <!-- give it a label/name because there are 2 navs on zine page -->
-            <ul role="list">
-                <li><a href="/#donate">Donate</a></li> <!-- change this to Internet Archive donate page when thing is over -->
-                <li><a href="/faq/"{% if page.url == "/faq/" %} aria-current="page"{% endif %}>FAQ</a></li>
-                <li><a href="/links/"{% if page.url == "/links/" %} aria-current="page"{% endif %}>Links</a></li>
-                <li><span>Zine - Coming Soon!</span></li>
-                <li><a href="/credits/" {% if page.url == "/credits/" %} aria-current="page"{% endif %}>Credits</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main">
-        <h1><span class="paper-strip">{{ title }}</span></h1>
-        {{ content | safe}}
-    </main>
-    <footer>
-        {% if footer -%}
-        <p>{{ footer | safe }}</p>
-        {%- endif %}
-        <p><a href="/accessibility/">Accessibility</a></p>
-    </footer>
+        <a class="skip-link paper-strip" href='#main'>Skip to content</a>
+        <header>
+            <!-- TODO: Replace link below with image link for Home page? -->
+            <div class="tk-alta-california site-title"><a href="/">The Internet Archive Fundraiser Zine</a></div>
+            <nav aria-label="main"> <!-- give it a label/name because there are 2 navs on zine page -->
+                <ul role="list">
+                    <li><a href="/#donate">Donate</a></li>
+                    <!-- change this to Internet Archive donate page when thing is over -->
+                    <li><a href="/faq/" {% if page.url=="/faq/" %} aria-current="page" {% endif %}>FAQ</a></li>
+                    <li><a href="/links/" {% if page.url=="/links/" %} aria-current="page" {% endif %}>Links</a></li>
+                    <li><span>Zine - Coming Soon!</span></li>
+                    <li><a href="/credits/" {% if page.url=="/credits/" %} aria-current="page" {% endif %}>Credits</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <h1><span class="paper-strip">{{ title }}</span></h1>
+            {{ content | safe}}
+        </main>
+        <footer>
+            {% if footer -%}
+            <p>{{ footer | safe }}</p>
+            {%- endif %}
+            <p><a href="/accessibility/">Accessibility</a></p>
+        </footer>
     </div>
 </body>
+
 </html>

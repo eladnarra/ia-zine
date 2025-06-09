@@ -1,18 +1,25 @@
 ---
 title: "Credits"
 layout: base_layout
+description: "The volunteers that make this possible, plus the resources we used."
 ---
-<p>This project would not have been possible without the time, ideas, skills and enthusiasm of a core team of volunteers:</p>
 <h2><span class="paper-strip">Volunteers</span></h2>
+<p>This project would not have been possible without the time, ideas, skills and enthusiasm of a core team of volunteers.</p>
 <ul>
     {%- for volunteer in volunteers -%}
-    <li><a href="{{volunteer.link}}">{{volunteer.name}}</a> ({{volunteer.pronouns}}) {%- if volunteer.supportSentence %}<br><span class="bold-text">I support the Internet Archive because:</span> {{volunteer.supportSentence}}{%- endif -%}</li>
+    <li><a href="{{volunteer.link}}">{{volunteer.name}}</a> ({{volunteer.pronouns}}) {%- if volunteer.supportSentence
+        %}<br><span class="bold-text">I support the Internet Archive because:</span> {{volunteer.supportSentence}}{%-
+        endif -%}</li>
     {%- endfor -%}
 </ul>
 <h2><span class="paper-strip">Credits</span></h2>
 <ul>
-    <li><a href="https://halftonehospital.gumroad.com/l/typewriter215FP">Typewriter 215FP Dialogue Font</a> by Halftone Hospital</li>
+    <li><a href="https://halftonehospital.gumroad.com/l/typewriter215FP">Typewriter 215FP Dialogue Font</a> by Halftone
+        Hospital</li>
     <li>
         <a href="https://medialoot.com/item/seamless-paper-texture-pack/">Smooth seamless paper texture</a> by MediaLoot
+    </li>
+    <li>
+        <a href="https://fonts.adobe.com/fonts/alta-california">Alta California Font</a> by Steve Mehallo
     </li>
 </ul>

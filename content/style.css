@@ -189,6 +189,19 @@ h2:nth-of-type(even) {
     rotate: 1deg;
 }
 
+.site-title {
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    text-align: center;
+    line-height: 1;
+    margin-block-end: 1rem;
+}
+
+.site-title a {
+    text-decoration: none;
+    color:var(--text-color);
+}
+
 header nav ul {
     list-style: none;
     padding: 0;
