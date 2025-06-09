@@ -254,6 +254,12 @@ header nav li:nth-of-type(odd) {
     font-weight:600;
 }
 
+.donation-counter {
+    border: 2px solid #cc1111;
+    padding: 1rem;
+    text-align: center;
+}
+
 /* Zoho Form Styles     ----------------------  */
 
 .zoho-form {
