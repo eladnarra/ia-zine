@@ -137,7 +137,7 @@ h6+*,
     margin-block-start: 0;
 }
 
-li + li {
+ol > li + li {
     margin-block-start: .5rem;
 }
 
