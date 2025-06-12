@@ -54,6 +54,10 @@
             <p><a href="/accessibility/">Accessibility</a></p>
         </footer>
     </div>
+
+    {% if page.url == "/" %} <!-- load the JS only if on the homepage -->
+        <script src="/js/donations-counter.js" defer></script>
+    {% endif %}
 </body>
 
 </html>
