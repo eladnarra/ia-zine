@@ -357,28 +357,29 @@ img {
     block-size: auto;
 }
 
-dl {
+.item dl {
     margin-block: 0;
 }
 
-dl div {
+.item dl div {
     display: grid;
     grid-auto-columns: 11ch 1fr;
 }
 
-dd,
-dt {
+.item dd,
+.item dt {
     display: inline;
     margin: 0;
 }
 
-dt {
+.item dt {
     grid-column: 1 / 2;
+}
+dt {
     font-weight: 600;
     font-variant-caps: small-caps;
 }
-
-dd {
+.item dd {
     grid-column: 2 / 3;
 }
 
@@ -433,4 +434,13 @@ footer {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+[href=""] {
+    outline: red 2px dashed;
+    outline-offset: 2px;
+}
+[href=""]::after {
+    content: " Missing Link!";
+    color: red;
 }
