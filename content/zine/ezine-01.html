@@ -1,24 +1,19 @@
 ---
 layout: base_layout
-title: The Internet Archive Fundraising Zine!
+title: The Internet Archive Fundraiser Zine!
+total: 514.79
 ---
 <img src="" alt="front cover placeholder" eleventy:optional="placeholder" width="500" height="800" class="cover">
+<!-- TODO: finalize the intro -->
 <!-- <h2>About</h2>
-<p>This zine was created during a fundraiser for the <a href="https://archive.org">Internet Archive</a>. It showcases a tiny fraction of the amazing old websites, books, zines, music, games, and more that are available on the archive (for free!). </p>
-
-<hr> -->
+<p>This zine was created during a fundraiser for the <a href="https://archive.org">Internet Archive</a>. It showcases a tiny fraction of the amazing old websites, books, zines, music, games, and more that are available on the archive (for free!). </p><hr> -->
 <h2><span class="paper-strip">What's This Zine?</span></h2>
 <p>The <a href="https://archive.org">Internet Archive</a> houses an amazing collection of websites, books, zines, music, games, and more, available to the public for free. They catalog changes to websites new and old through their Wayback Machine, and they share media that isn't available elsewhere, like historical 78rpm records.</p>
 <p>But the Internet Archive's mission is under threat from record label lawsuits and cyber attacks. As governments take down webpages to erase history and media companies restrict access to our collective culture, their work is more important than ever — and they need our support!</p>
 <p>In honor of <a href="https://www.ica.org/international-archives-week/iaw2025/">International Archives Week 2025</a>, a group of zinesters, archive fans, and webweavers ran a fundraiser for the Internet Archive. For every donation of $5 or more we found a cool thing in the archive, and at the end we collected all of them into this free (unofficial) zine!</p>
 <p>Over the course of the week we raised <strong>${{total}}</strong> from <strong>{{researchItems.length}}</strong> people! Thank you so very much to everyone who donated. And if you missed your chance, you can still <a href="https://archive.org/donate/">donate here</a>.</p>
 <p>Let's help keep the Internet Archive alive!</p>
-
-<!--<hr> <h2>What's This Zine?</h2>
-<p>The <a href="https://archive.org">Internet Archive</a> is an amazing repository of old websites, books, zines, music, games, and more, available to the public for free. In these times their work to preserve our culture and history is more important than ever, and they need our support!</p>
-<p>In honor of <a href="https://www.ica.org/international-archives-week/iaw2025/">International Archives Week 2025</a>, a group of zinesters, webweavers, and archive fans got together to run a fundraiser for the Internet Archive. For every donation of $5 or more we found a cool thing in the Internet Archive, with donors able to request a topic. And at the end we collected all of them into this free zine!</p>
-<p>Over the course of the week we received a total of <strong>${{total}}</strong> from <strong>{{researchItems.length}}</strong> people! Thank you so so much to everyone who donated. If you missed your chance and want to donate, you can do so directly at <a href="https://archive.org/donate/">archive.org/donate.</a> </p>
-<p>Let's help keep the Internet Archive alive!</p> -->
+<!--  TODO: maybe make this contents cover the whole zine, put up front before intro? -->
 <nav aria-labelledby="contents">
     <h2 id="contents"><span class="paper-strip">Contents</span></h2>
     <p>Donors could suggest a topic; if they didn't, researchers got a "wildcard" and picked something they like!</p>
@@ -28,12 +23,14 @@ title: The Internet Archive Fundraising Zine!
         {%- endfor -%}
     </ol>
 </nav>
+<!-- todo: figure out placement of art (currently 2 pieces, may have more) -->
 <aside>
 <figure>
     <img src="/img/art/cat.jpg" alt="A cat painted in grayscale sits on its haunches holding a book in its front paws. Above is the text 'Protect the Truth', and the cover of the book says 'Internet Archive. Universal Knowledge. History of Today.'" class="art">
     <figcaption>Art by <a href="https://jamestalon.art">James Talon</a>.</figcaption>
 </figure>
 </aside>
+<!-- TODO: figure out an order that makes sense for the item details (and which to include) -->
 {%- for item in researchItems -%}
 <article class="item">
     <h2 id="{{loop.index}}-{{item.topic | slugify}}"><span class="paper-strip">{{loop.index}}. {{item.topic}}</span></h2>
@@ -51,62 +48,31 @@ title: The Internet Archive Fundraising Zine!
             <dd>{{item.author}}</dd>
         </div>
         <div>
-            <dt>Type</dt>
-            <dd>{{item.type}}</dd>
+            <dt>Year</dt>
+            <dd>{{item.year}}</dd>
         </div>
-        {%- if item.collection -%}
         <div>
-            <dt>Collection</dt>
-            <dd>{{item.collection}}</dd>
+            <dt>Donor</dt>
+            <dd>{{item.donor}}</dd>
         </div>
-        {%- endif -%}
+        <div>
+            <dt>Researcher</dt>
+            <dd>{{item.researcher}}</dd>
+        </div>
     </dl>
     </div>
     <div class="description">
         <p>{{item.description}}</p>
+        {%- if item.extra -%}
+        <p class="extra-info">{{item.extra}}</p>
+        {%- endif -%}
     </div>
 </article>
 {%- endfor -%}
-<hr>
-{#<p>Another option:</p>
-{%- for item in researchItems -%}
-<article class="item">
-    <h2 id="{{loop.index}}">{{loop.index}}. <cite><a href="{{item.link}}">{{item.name}}</a></cite></h2>
-    <img src="{{item.img}}" alt="{{img.alt}}">
-    <div class="info">
-    <dl>
-        <!-- <div>
-            <dt>Title</dt>
-            <dd><a href="{{item.link}}">{{item.name}}</a></dd>
-        </div> -->
-        <div>
-            <dt>Topic</dt>
-            <dd>{{item.topic}}</dd>
-        </div>
-        <div>
-            <dt>Author{%- if "and" in item.author-%}s{%- endif -%}</dt>
-            <dd>{{item.author}}</dd>
-        </div>
-        <div>
-            <dt>Type</dt>
-            <dd>{{item.type}}</dd>
-        </div>
-        {%- if item.collection -%}
-        <div>
-            <dt>Collection</dt>
-            <dd>{{item.collection}}</dd>
-        </div>
-        {%- endif -%}
-    </dl>
-    </div>
-    <div class="description">
-        <p>{{item.description}}</p>
-    </div>
-</article>
-{%- endfor -%}#}
 <h2><span class="paper-strip">Credits</span></h2>
 <p>This zine wouldn't have been possible without these amazing researchers, coders, and artists!</p>
 <ul class="volunteers">
+    <!-- TODO: make this use more info from the data file? could use code from credits page -->
     {%- for volunteer in volunteers -%}
     <li><a href="{{volunteer.link}}">{{volunteer.name}} ({{volunteer.pronouns}})</a></li>
     {%- endfor -%}

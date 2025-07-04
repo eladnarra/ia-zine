@@ -383,6 +383,11 @@ dt {
     grid-column: 2 / 3;
 }
 
+.item .extra-info {
+    border: 2px var(--text-color) dashed;
+    padding: 5px;
+}
+
 footer {
     font-size: 0.9rem;
 }

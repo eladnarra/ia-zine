@@ -1,33 +1,40 @@
 [
     {
         "topic": "Do It Yourself",
+        "donor": "Name A",
+        "researcher": "Name B",
         "name": "Art + DIY Electronics",
+        "year": "2000",
         "img": "img1.png",
         "alt": "",
         "author": "Garnet Hertz",
-        "collection": "MIT Press: Open Access Materials",
         "link": "https://archive.org/details/mit_press_book_9780262361576",
         "type": "Book",
-        "description": "A systematic theory of DIY electronic culture, drawn from a century of artists who have independently built creative technologies."
+        "description": "A systematic theory of DIY electronic culture, drawn from a century of artists who have independently built creative technologies.",
+        "extra": "This is an extra info box."
     },
     {
         "topic": "Board games",
+        "donor": "Name A",
+        "researcher": "Name B",
         "name": "Playing Oppression: The Legacy of Conquest and Empire in Colonialist Board Games ",
+        "year": "2000",
         "img": "img2.png",
         "alt": "",
         "author": "Mary Flanagan and Mikael Jakobsson",
-        "collection": "MIT Press: Open Access Materials",
         "link": "https://archive.org/details/mit_press_book_9780262373715",
         "type": "Book",
         "description": "A striking analysis of popular board games' roots in imperialist reasoning — and why the future of play depends on reckoning with it."
     },
     {
         "topic": "Wildcard",
+        "donor": "Name A",
+        "researcher": "Name B",
         "name": "Playing Oppression: The Legacy of Conquest and Empire in Colonialist Board Games ",
+        "year": "2000",
         "img": "img2.png",
         "alt": "",
         "author": "Mary Flanagan and Mikael Jakobsson",
-        "collection": "MIT Press: Open Access Materials",
         "link": "https://archive.org/details/mit_press_book_9780262373715",
         "type": "Book",
         "description": "A striking analysis of popular board games' roots in imperialist reasoning — and why the future of play depends on reckoning with it."
